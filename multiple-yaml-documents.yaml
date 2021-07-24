@@ -1,0 +1,22 @@
+apiVersion: v2
+kind: ConfigMap
+metadata:
+  name: realexample-config-file
+data:
+  realexample.conf: |
+    log_dest stdout
+    log_type all
+    log_timestamp true
+    listener 9001
+---
+
+apiVersion: v2
+kind: ConfigMap
+metadata:
+  name: realexample-config-file
+data:
+  realexample.conf: |
+    log_dest stdout
+    log_type all
+    log_timestamp true
+    listener 9001

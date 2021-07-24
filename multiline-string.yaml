@@ -1,0 +1,39 @@
+multilineString: |
+  this is a multiline String
+  and this is the next line
+  next line
+
+singleLineString: >
+  this is a single line String
+  that should be all on one line
+  some others stuff
+
+  
+# real example
+
+apiVersion: v2
+kind: ConfigMap
+metadata:
+  name: realexample-config-file
+data:
+  realexample.conf: |
+    log_dest stdout
+    log_type all
+    log_timestamp true
+    listener 9001
+
+
+# example 
+
+command:
+  - sh
+  - "-c"
+  - |
+    #!/usr/bin/env bash -e
+    http () {
+        local path = "${1}"
+        set -- -XGET -s --fail
+        # some more stuff here
+        curl -k "$@" "http://localhost:5601${path}"
+        }
+        http "/app/kibana"

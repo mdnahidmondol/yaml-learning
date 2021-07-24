@@ -1,0 +1,25 @@
+microservice:
+  - app: user-authentication 
+    port: 9000
+    version: 1.0
+    # boolean 
+    deployed: true
+    #more item in list
+  - app: shopping-cart
+    port: 9001
+    version:
+    # list in list
+    - 1.0
+    - 1.2
+    - 1.3
+    - 1.4
+    
+
+
+
+# list with simple values
+microserviceNew:
+  - user-authentication
+  - shopping-cart
+
+
